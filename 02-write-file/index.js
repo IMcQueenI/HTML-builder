@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const {stdin, stdout,} = process;
+const {stdin, stdout} = process;
 
 const mqPath = path.join(__dirname, 'data.txt');
 const mqOut = fs.createWriteStream(mqPath);
