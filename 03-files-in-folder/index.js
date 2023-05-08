@@ -8,14 +8,14 @@ function mqSpecs (file) {
 			const fileSpecs = path.parse(file.name);
 			console.log(`${fileSpecs.name} - ${fileSpecs.ext.slice(1)} - ${scale.size / 1024} kb`);
 		} else {
-			console.log(error);
+			console.log('Some mistake with file');
 		};
 	});
 };
 
 fs.readdir(mqPath, {withFileTypes: true}, (error, files) => {
 	if (error) {
-		console.log(error);
+		console.log('Some mistake with file');
 	} else {
 		files.forEach(file => {
 			if (file.isFile()) {
